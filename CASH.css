@@ -412,27 +412,28 @@ width: 100%;
 .amount-exceed
 {
    background-color: black; 
-  width: 20rem;
+  width: 100%;
   padding: 1rem;
-  border-radius: 4rem;
+  border-radius: 2rem;
   display: flex;
-justify-content: center;
+
    z-index: 1;
 
 }
-.amount-exceed span{
+.amount-exceed{
     color: red;
     font-size:var(---forth-font-1-5rem);
     display: flex;
     gap: 0.5rem;
- 
+ justify-content: center;
+    align-items: center;
 }
 
 
 
 .amount-exceed span p{
     color: red;
-
+width: 100%;
 }
 
 .amountpass,.succefful-withdraw-rap
