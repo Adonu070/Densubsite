@@ -13,6 +13,10 @@ renderall()
 }
 
 
+
+
+
+
 function renderall(){
 
   let detailhtml=''
@@ -27,7 +31,6 @@ detailhtml+=html;
 }
 document.querySelector('.text').innerHTML=detailhtml;
 }
-
 
 // background-color
 
@@ -51,4 +54,8 @@ function turn(){
     }
    
   }
+
+
+
+
 

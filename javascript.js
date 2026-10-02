@@ -14,6 +14,8 @@
 
 
 
+
+
 let balance=Number(localStorage.getItem('recivin'))||0;
 
 let totaltxr=localStorage.getItem('totataltransaction');
@@ -1468,6 +1470,10 @@ document.querySelector('.local-bank').addEventListener('click',()=>{
 
 
 
+
+
+
+
 // transaction details
 // let ch='08755'
 // const clipboardimage=document.querySelector('.clipborad-image')
@@ -1628,6 +1634,10 @@ closerefpage.addEventListener('click',()=>{
 
 
 }
+
+
+
+
 
 // Home page end
 

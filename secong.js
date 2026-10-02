@@ -332,6 +332,21 @@ transaferaccountnumber.innerHTML=banks.opaydetails
 
 }
 
+ let feature= document.querySelectorAll('.notready')
+if (feature){
+ feature.forEach(feature=>{
+ feature.addEventListener('click',()=>{
+
+document.querySelector('.comingsoon').innerHTML='Feature coming soon!';
+setTimeout(()=>{
+document.querySelector('.comingsoon').innerHTML=''
+  },1000)
+})
+
+ })
+}
+
+
 // const copyimage=document.querySelector('.copya-image')
 // let theacoun='38829'
 
@@ -411,6 +426,10 @@ event.preventDefault()
   })
 
 }
+
+
+
+
 
 
 // change page End
