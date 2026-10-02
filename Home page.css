@@ -741,7 +741,7 @@ display: none;
 .top-cards{
     display: flex;
     align-items: center;
-  margin-bottom: -1rem;
+  /* margin-bottom: -1rem; */
 }
 
 
@@ -996,6 +996,10 @@ align-items: center;
 }
 
 
+
+.mobile{
+    display: none;
+}
 /* left feature page end */
 
 

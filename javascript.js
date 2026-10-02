@@ -10,8 +10,8 @@
 // console.log(date)
 // console.log(time)
 
-
-
+// densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`;
+ 
 
 
 
@@ -104,7 +104,7 @@ localStorage.setItem('balanceamount',balance);
  cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')}`
  densub.style.display='none'
    proccessingwithidrawal.style.display='block'
-
+console.log(localStorage.getItem('balanceamount'))
 setTimeout(()=>{
   
 succefullwithdrawal.innerHTML='Withdrawal successful'
@@ -872,13 +872,13 @@ let savebalcnce;
 if (inputotp.value===otp){
   invalidotp.style.display=''
 
-   setTimeout(function(){
+  //  setTimeout(function(){
  proccessingrap.style.display='block'
 otprange.style.display='none'
 
 
 
-  },2000)
+  // },1000)
  
 let settime=setTimeout(function(){
 
@@ -1572,9 +1572,9 @@ if (densubbalance){
   
 let densubbalance=document.getElementById('densubbalance')
 
-densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}0`||0
+// densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}0`||0
 
-document.querySelector('.totaltrx').innerHTML=localStorage.getItem('totataltransaction')||0;
+
 
 
 

@@ -804,7 +804,12 @@ transform: scale(1.03,1.03);
     display: flex;
     align-items: center;
     gap: 0.2rem;
-    
+   
+}
+
+.otp{
+ margin-top: 1rem;
+   
 }
 
 .resent-codeloadin{

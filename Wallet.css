@@ -134,6 +134,186 @@ span
 }
 
 
+.feature-second-flex{
+    width: 50%;
+    padding: 2rem;
+    border: 2px solid #161d29;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+   
+}
+
+
+.bank-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fund-var-bank{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+
+.acount-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(---cards-border);
+    font-size: var(---forth-font-1-5rem);
+padding: 1rem;
+border-radius: 2rem;
+}
+
+.bank-and-account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: var(---cards-border);
+    font-size: var(--third-font-2rem);
+    padding: 1rem;
+border-radius: 2rem;
+
+
+}
+
+
+.bank-transfar{
+    font-size: var(--third-font-2rem);
+    
+}
+
+.bank-image{
+   width: 5rem;
+}
+
+.banks
+{
+display: flex;
+justify-content: flex-end;
+width: 100%;
+background-color: var(---cards-border);
+
+
+}
+.banks span{
+    /* background-color: #575a5f; */
+   /* border: 2px solid var(--first-color-darkblue); */
+  
+    border-radius: 1rem;
+font-size: var(--third-font-2rem);
+font-weight: 600;
+    cursor: pointer;
+    width: 10rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+/* .banks span:active{
+background-color: var(--sixth-color-almost-black);
+} */
+
+.bank-rap{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.copya-image{
+    width: 2rem;
+    cursor: pointer;
+}
+
+.account-copy{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.green{
+    background-color: #37b24d;
+}
+
+.acount-numer-copying{
+    font-size: var(--third-font-2rem);
+}
+
+.home-profile-image{
+
+   width: 7rem; 
+}
+
+.profile-rap{
+    display: flex;
+    align-items: center;
+}
+
+
+.bank-head{
+    font-size: var(---forth-font-1-5rem);
+    color: lightgray;
+}
+
+
+.featur-ranig{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: 1px solid #171d22   ;
+    padding: 2rem;
+   border-radius: 2rem;
+   
+}
+
+.mobile{
+    display: none;
+}
+
+.sign-rap
+{
+    display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.firstsing,.secondsing,.thiredsing{
+    background-color: var(--Forth-color-white-white);
+    border-radius: 1rem;
+    /* display: none; */
+    
+    width: 100%;
+    height: 0.5rem;
+  /* padding: 1rem  0.5rem; */
+}
+
+.comingsoon{
+    color: var(--Forth-color-white-white);
+    font-size: var(--third-font-2rem);
+    position:fixed;
+   top:40%;
+   left: 50%;
+   transform: translate(-50%);
+  transition:ease-in-out 0.1s;
+}
+
+
+.all-wallet-rap{
+    display: flex;
+    gap: 2rem;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+
+}
 
 
 

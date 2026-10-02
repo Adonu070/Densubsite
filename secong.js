@@ -1,7 +1,6 @@
 
 
 
-
 // Register page
 const registerform=document.getElementById('register-form');
 const firstnameinput=document.getElementById('first-name');
@@ -271,9 +270,7 @@ if(homeuserdisplay){
 
 // second feature page
 let fundvartransaeter=document.querySelector('.fund-var-bank')
-
-if (fundvartransaeter){
-  const banks={
+const banks={
   palmpaydetails:'9025342728',
   kudadetails:'2272837352',
   opaydetails:'7028273737',
@@ -281,6 +278,13 @@ if (fundvartransaeter){
 
 }
 
+
+
+
+
+
+if (fundvartransaeter){
+  
 let transaferaccountname=document.getElementById('transaferaccountname');
 let transferbankname=document.getElementById('transaferbankname')
 let transaferaccountnumber=document.getElementById('transaferaccountnumber')
@@ -345,6 +349,9 @@ document.querySelector('.comingsoon').innerHTML=''
 
  })
 }
+
+
+
 
 
 // const copyimage=document.querySelector('.copya-image')
@@ -429,8 +436,8 @@ event.preventDefault()
 
 
 
-
-
+densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`||0
+document.querySelector('.totaltrx').innerHTML=localStorage.getItem('totataltransaction')||0;
 
 // change page End
 
@@ -451,6 +458,18 @@ document.getElementById('usershow').innerHTML=localStorage.getItem('username')
 
 
 
+// wallet page
+
+
+let wallet=document.querySelector('.all-wallet-rap')
+if (wallet){
+ 
+  document.getElementById('transaferaccountnumberwalletlast').innerHTML=banks.opaydetails;
+}
+
+
+
+// wallet page end
 
 
 
