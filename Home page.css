@@ -989,7 +989,7 @@ align-items: center;
     color: var(--Forth-color-white-white);
     font-size: var(--third-font-2rem);
     position:fixed;
-   top:10%;
+   top:40%;
    left: 50%;
    transform: translate(-50%);
   transition:ease-in-out 0.1s;
