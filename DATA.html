@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="DATA.css">
+    <title>Mobile Data</title>
+</head>
+<body>
+    
+<header>
+    <div class="hearder-rap">
+        <a href="Home page.html">  <img class="image-top" src="Icons/arrow-back-2.svg" alt=""></a>
+  
+    <span class="Buy-data">BUY DATA</span></div>
+</header>
+
+
+<div class="container">
+
+
+<div class="logos-direction">
+<div class="logos">
+<div class="image-sings-rap">
+<img class="image-icon" src="images/MTN.jpg" alt="">
+<span class="MTNdata-signs"></span>
+</div>
+
+<div class="image-sings-rap">
+ <img class="image-icon" src="images/Airtel.jpg" alt="">
+ <span class="AIRTELdata-signs"></span>
+</div>
+
+
+<div class="image-sings-rap">
+ <img class="image-icon" src="images/GLO.jpg" alt="">
+<span class="GLOdata-signs" > </span>
+</div>
+
+<div class="image-sings-rap">
+ <img class="image-icon" src="images/9mobile 2.jpg" alt="">
+ <span class="ninemobile-signs"></span></div>
+</div></div>
+
+
+<div class="form-direction">
+<form id="dataform" class="form-rap" action="/data/submite" method="get">
+
+   <div class="network-rap">
+    <label for="Network" id="labelnetwork"> Network*</label>
+    <select name="Category" onclick="networklogo()" id="alldatanetwork" required>
+        <option value="network">Select</option>
+        <option value="MTN"> MTN</option>
+        <option value="AIRTEL"> AIRTEL</option>
+        <option value="GLO"> GLO</option>
+        <option value="9MOBILE">9MOBILE</option>
+    </select>
+    <span id="emptydatanetwork" class="emptynetwork">Please select network</span>
+</div>
+
+
+
+
+
+    <div class="network-rap">
+<label for="plan">Plan*</label>
+
+
+<select onclick="datapricesclick()" name="plan" id="plan" required>
+    <option value="Select-plan">Select plan</option>
+<!-- MTN -->
+    <optgroup label="MTN" id="MTN" class="Network-prices">
+
+     <option value="710" data-bundle="1GB"  data-validity="14days">1GB-valid for 14days= ₦710</option>
+
+     <option value="500"  data-bundle="500MB" data-validity="7days">500MB-valid for 7days=₦500</option>
+     <option value="999" data-bundle="2.5GB" data-validity="14days">2.5GB-valid for 14days=₦999</option>
+     <option value="3999" data-bundle="1GB" data-validity="30days">1GB-valid for 30days=₦3,999</option>
+     <option value="1569" data-bundle="3GB" data-validity="30days">3GB-valid for 3days=₦1,569</option>
+
+
+     <option value="2999" data-bundle="1GB" data-validity="30days">1GB-valid for 30days=₦2,999</option>
+     <option value="6540" data-bundle="15GB" data-validity="30days">15GB-valid for 30days=₦6,540</option>
+     <option value="9999" data-bundle="20GB" data-validity="30days">20GB-vali for 30days=₦9,999</option>
+     <option value="2490" data-bundle="4GB" data-validity="14days">4GB-valid for 14days=₦2,490</option>
+     <option value="7545" data-bundle="18GB" data-validity="30days">18GB-valid for 30days=₦7,545</option>
+     <option value="400" data-bundle="1GB" data-validity="3days">1GB-valid for 3days=₦400</option>
+     <option value="5200" data-bundle="8GB" data-validity="30days">8GB-valid for 30days=₦5,200</option>
+     <option value="1569" data-bundle="3GB" data-validity="30days">3GB-valid for 30days=₦1,569</option>
+     <option value="3101" data-bundle="6GB" data-validity="7days">6GB-valid for 7days=₦3,101</option>
+     <option value="2100" data-bundle="5GB" data-validity="7days">5GB-valid for 7days=₦2,100</option>
+     <option value="450" data-bundle="70MB" data-validity="3days">70MB-valid for 3days=₦450</option>
+     <option value="260" data-bundle="1GB" data-validity="1day">1GB-valid for 1day=₦260</option>
+     <option value="3890" data-bundle="6.5GB" data-validity="30days">6.5GB-valid for 30days=₦3,890</option>
+     <option value="1845" data-bundle="4.8GB" data-validity="30days">4.8GB-valid for 30days=₦1,845</option>
+     <option value="850" data-bundle="3GB" data-validity="30days">1.5GB-valid for 14days=₦850</option>
+    </optgroup>
+     <!-- Aitel -->
+<optgroup label="Airtel" id="Airtel" class="Network-prices">
+
+     <option value="Airtel">Airtel</option>
+     <option value="1569" data-bundle="3GB" data-validity="30days">3GB-valid for 30days=₦1,569</option>
+     <option value="2999" data-bundle="7GB" data-validity="30days">7GB-valid for 30days=₦2,999</option>
+     <option value="6540" data-bundle="15GB" data-validity="30days">15GB-valid for 30days=₦6,540</option>
+     <option value="9999" data-bundle="20GB" data-validity="30days">20GB-valid for 30days=₦9,999</option>
+     <option value="2490" data-bundle="4GB" data-validity="14days">4GB-valid for 14days=₦2,490</option>
+     <option value="7545" data-bundle="18GB" data-validity="30days">18GB-valid for 30days=₦7,545</option>
+     <option value="400" data-bundle="1GB" data-validity="3days">1GB-valid for 3days=₦400</option>
+     <option value="5200" data-bundle="8GB" data-validity="30days">8GB-valid for 30days=₦5,200</option>
+     <option value="1299" data-bundle="2GB" data-validity="14days">2GB-valid for 14days=₦1,299</option>
+     <option value="3101" data-bundle="6GB" data-validity="7days">6GB-valid for 7days=₦3,101</option>
+     <option value="2100" data-bundle="5GB" data-validity="7days">5GB-valid for 7days=₦2,100</option>
+     <option value="450" data-bundle="70MB" data-validity="3days">70MB-valid for 3days=₦450</option>
+     <option value="260" data-bundle="1GB" data-validity="1day">1GB-valid for 1day=₦260</option>
+     <option value="3890" data-bundle="6.5GB" data-validity="30days">6.5GB-valid for 30days=₦3,890</option>
+     <option value="1845" data-bundle="4.8GB" data-validity="30days">4.8GB-valid for 30days=₦1,845</option>
+     <option value="850" data-bundle="1.5GB" data-validity="14days">1.5GB-valid for 14days=₦850</option>
+</optgroup>
+
+     <!-- GLO-->
+<optgroup label="GLO" id="GLO" class="Network-prices">
+
+     <option value="Airtel">GLO</option>
+     <option value="1569" data-bundle="3GB" data-validity="30days">3GB-valid for 3days=₦1,569</option>
+     <option value="2999" data-bundle="7GB" data-validity="30days">7GB-valid for 30days=₦2,999</option>
+     <option value="6540" data-bundle="15GB" data-validity="30days">15GB-valid for 30days=₦6,540</option>
+     <option value="9999" data-bundle="20GB" data-validity="30days">20GB-valid for 30days=₦9,999</option>
+     <option value="2490" data-bundle="4GB" data-validity="14days">4GB-valid for 14days=₦2,490</option>
+     <option value="7545" data-bundle="18GB" data-validity="30days">18GB-valid for 30days=₦7,545</option>
+     <option value="400" data-bundle="1GB" data-validity="3days">1GB-valid for 3days=₦400</option>
+     <option value="5200" data-bundle="8GB" data-validity="30days">8GB-valid for 30days=₦5,200</option>
+     <option value="1299" data-bundle="2GB" data-validity="14days">2GB-valid for 14days=₦1,299</option>
+     <option value="3101" data-bundle="6GB" data-validity="7days">6GB-valid for 7days=₦3,101</option>
+     <option value="2100" data-bundle="5GB" data-validity="7days">5GB-valid for 7days=₦2,100</option>
+     <option value="450" data-bundle="70MB" data-validity="3days">70MB-valid for 3days=₦450</option>
+     <option value="260" data-bundle="1GB" data-validity="1day">1GB-valid for 1day=₦260</option>
+     <option value="3890" data-bundle="6.5GB" data-validity="30days">6.5GB-valid for 30days=₦3,890</option>
+     <option value="1845" data-bundle="4.8GB" data-validity="30days">4.8GB-valid for 30days=₦1,845</option>
+     <option value="850" data-bundle="1.5GB" data-validity="14days">1.5GB-valid for 14days=₦850</option>
+</optgroup>
+
+
+     <!-- 9MOBLE -->
+<optgroup label="9mobile" id="9mobile" class="Network-prices">
+
+     <option value="Airtel">9MOBILE</option>
+     <option value="1569" data-bundle="3GB" data-validity="30days">3GB-valid for 30days=₦1,569</option>
+     <option value="2999" data-bundle="7GB" data-validity="30days">7GB-valid for 30days=₦2,999</option>
+     <option value="6540" data-bundle="15GB" data-validity="30days">15GB-valid for 30days=₦6,540</option>
+     <option value="9999" data-bundle="20GB" data-validity="30days">20GB-valid for 30days=₦9,999</option>
+     <option value="2490" data-bundle="4GB" data-validity="14days">4GB-valid for 14days=₦2,490</option>
+     <option value="7545" data-bundle="18GB" data-validity="30days">18GB-valid for 30days=₦7,545</option>
+     <option value="400" data-bundle="1GB" data-validity="3days">1GB-valid for 3days=₦400</option>
+     <option value="5200" data-bundle="8GB" data-validity="30days">8GB-valid for 30days=₦5,200</option>
+     <option value="1299" data-bundle="2GB" data-validity="14days">2GB-valid for 14days=₦1,299</option>
+     <option value="3101" data-bundle="6GB" data-validity="7days">6GB-valid for 7days=₦3,101</option>
+     <option value="2100" data-bundle="5GB" data-validity="7days">5GB-valid for 7days=₦2,100</option>
+     <option value="450" data-bundle="70MB" data-validity="3days">70MB-valid for 3days=₦450</option>
+     <option value="260" data-bundle="1GB" data-validity="1day">1GB-valid for 1day=₦260</option>
+     <option value="3890" data-bundle="6.5GB" data-validity="30days">6.5GB-valid for 30days=₦3,890</option>
+     <option value="1845" data-bundle="4.8GB" data-validity="30days">4.8GB-valid for 30days=₦1,845</option>
+     
+     <option value="850" data-bundle="1.5GB" data-validity="14days">1.5GB-valid for 14days=₦850</option>
+</optgroup>
+
+
+</select>
+
+
+<div class="network-rap-last">
+    <label for="Number"> Phone Number*</label>
+    <div class="inpute-number-rap">
+    <input id="inputnumber" type="number" name="number" placeholder="input number" required  min="11">
+    <img class="input-icons" src="Icons/profile-3.svg" alt="">
+</div>
+<span class="confirmdatanumber-network">Pleaese confirm the selected newtork and phone number before continue</span>
+<!-- <span class="available-balance">Available balance: <span id="datapagebalance" class="Dataspendaweae">2500</span></span> -->
+</div>
+
+
+
+  <span id="emptydataplan" class="emptynetwork">Please select plan</span>
+</div>
+<button id="buybtn" type="submit" onclick="buydata()">Buy</button>
+<button class="continue-buying" id="continue-buying" onclick="continuedata()">Continue</button>
+</form>
+
+</div>
+
+<div id="dataproccesing" class="dataproccesing">
+    <div id="proccessing-rap" class="proccessing-rap">
+    <div class="proceesingrang">
+        <p>proccessing...</p>
+<div class="proccessing">
+
+</div>
+    </div>
+
+</div>
+</div>
+
+<div id="was-succefullrap" class="was-succefullrap">
+<div class="was-succefull">
+
+        <div><span id="succefulnewtwork"></span>
+            <span id="plan-bought"></span>  
+        </div>
+ <span>was successful </span>
+ <span>👋</span>
+</div>
+
+</div>
+
+<div id="insuficent" class="insufficient-direction">
+    <div class="insuficient-rap">
+    <span id="insufficient-balance">Insufficient balance please top up</span>
+    <img class="insufficient-image" src="Icons/close-page.svg" alt="">
+</div></div>
+
+<div class="theaddtest">
+
+</div>
+
+<button class="clicking" >click</button>
+
+</div>
+
+
+<script  src="javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CASH.css">
+    <title>CASH</title>
+</head>
+<body>
+       
+<header>
+    <div class="hearder-rap">
+        <a href="Home page.html">  <img class="image-top" src="Icons/arrow-back-2.svg" alt=""></a>
+  
+    <span class="CASH">AIRTIME TO CASH </span></div>
+</header>
+
+
+<div class="container">
+
+<div class="withdra-direction">
+<div class="widthdraw-rap">
+    <div class="Balance">
+    <span>Available Balance</span>
+    <div class="amountbalance-rap">
+    <span class="naira">₦</span>
+    <span class="amount" id="cashbalance"></span></div>
+</div>
+<div class="withdraw-rap">
+<div  >
+     <button class="withdraw"onclick="widrawal()">Withdraw</button>   
+    </div>
+    </div>
+</div>
+</div>
+
+<!-- withdrawal -->
+
+
+
+
+
+    
+ 
+
+
+    <span class="withdraw-successfull succefful-withdraw-rap"id="succefful-withdraw-rap">Withdrawal successful</span>
+
+
+
+
+
+
+<!-- to densub -->
+ <div id="densub" class="densub-bakblur" >
+<!-- amount pass -->
+
+ <div id="amount" class="amountpass">
+<div class="amount-exceed">
+<span>Amount exceed balance <p>X</p> </span>
+</div></div>
+
+
+<div>
+
+</div>
+
+
+
+<!-- amount pass end -->
+
+
+<div  class="densub ">
+    <div class="densub-rap">
+<div class="close">
+    <div></div>
+    <span>Withdrawal</span><img onclick="closepage()"src="Icons/close-page.svg" alt=""></div>
+
+<div class="label-rap">
+   <span>Withdraw to</span>
+<select  class="input-withdrawal"  onclick="secting()"name="" id="selectchoice">
+    <option value="select">Select</option>
+    <option value="Densub balance">Densub balance</option>
+    <option value="Local bank">Local bank</option>
+</select></div>
+
+
+
+        <div class="label-rap" id="densubinput">
+<label for="">Amount</label>
+    <div class="input-warning">
+<input class="input-withdrawal" id="input-amount" type="number" name="" placeholder="Min:₦1,000" ></div>
+
+
+<p id="minimumDen" class="minimum-den"></p></div>
+
+
+
+<!-- local bank -->
+
+<div id="local-bank" class="local-bank">
+<div  class="input-rap">
+   
+    <div class="label-rap">
+    <label for="" class="bank">Bank:</label>
+    <select  class="input-withdrawal"  name="category" id="local-withdrawal">
+        <option value="First bank">First bank</option>
+        <option value="Opay">Opay</option>
+        <option value="UBA">UBA</option>
+        <option value="Palmpay">Palmpay</option>
+        <option value="Kuda">Kuda</option>
+    </select></div>
+
+<div class="label-rap">
+<label for="acount-number">Account no:</label>
+<input class="input-withdrawal" id="acount-number" type="number" name="" placeholder="e.g:2363840274">
+<p class="account-number-error"></p>
+</div>
+
+
+        <div class="label-rap">
+<label for="">Amount</label>
+    <div class="input-warning">
+<input class="input-withdrawal" id="input-amountlocal" type="number" name="" placeholder="Min:₦1,000" ></div>
+
+
+<p id="minimumlocalbank" class="minimum-cansh"></p></div>
+
+
+
+<div class="label-rap">
+<label for="accoun-name"> Name:</label>
+<input  class="input-withdrawal"  id="account-name" type="text" placeholder="e.g:jonwil loran">
+<p class="name-error"></p>
+</div>
+<!-- <div class="label-rap">
+ <label for="">Amount</label>
+    <div class="input-warning">
+<input id="input-amount" type="number" name="" placeholder="Min:₦1,000" >
+<p id="minimum" class="minimum local">Minimum:₦1,000</p></div>
+</div>  -->
+<button class="local-bnt" onclick=" withdrawlocal()">Confirm</button>
+</div></div>
+
+<!-- local bank end -->
+
+<button class="densub-bnt" onclick="withdrawdensub()">Confirm</button>
+</div></div>
+<!-- to densub-end -->
+
+</div>
+
+
+
+
+
+
+
+<div id="proccessing-withdraw"  class="proccessing-withdraw">
+<div class="proccessing-withdraw-rap">
+    <p>proccessing...</p>
+<div class="loading">
+   </div>
+</div>
+</div>
+
+
+<!-- withdrawal end -->
+
+
+<div class="logos-direction">
+<div class="logos">
+    
+<div class="image-sings-rap">
+<img class="image-icon image-icon-border" src="images/MTN.jpg" alt="">
+
+<span class="MTN-signs"></span>
+ </div>
+
+ <div class="image-sings-rap">
+ <img class="image-icon image-icon-border" src="images/GLO.jpg" alt="">
+
+ <span class="GLO-signs" > </span>
+</div>
+
+<div class="image-sings-rap" >
+ <img  class="image-icon image-icon-border" src="images/Airtel.jpg" alt="">
+ <span class="AIRTEL-signs"></span>
+</div>
+
+</div></div>
+
+
+
+
+
+
+<div class="form-direction">
+<form id="cashform" class="form-rap" action="/data/submite" method="get">
+
+   <div class="network-rap">
+
+    <label for="Network"> Network*</label>  
+      <div>
+    <select onclick="switching()" id="Network" class="select-network" name="Category" >
+        <option value="select">Select</option>
+        <option value="MTN">MTN=80%</option>
+
+        <option value="AIRTEL"> AIRTEL=85%</option>
+
+        <option value="GLO"> GLO=80%</option>
+      
+    </select>
+    <div id="empty-network" class="theempty-network" >
+<p class="empty-network">Please select network</p></div></div>
+</div>
+
+
+
+<div class="network-rap-last ">
+    <label for="Number"> Sender Number*</label>
+    <div class="input-propery ">
+    <input id="number" onclick="sendnumber()" type="number" name="number" placeholder="input number" required min="11">
+    <img class="convert-icons" src="Icons/profile-3.svg" alt="">
+</div>
+</div>
+
+
+    <div class="network-rap-last">
+    <label for="Number" class="pin"> Pin (Default 1234)*</label>
+<div class="input-propery">
+    <input type="number" name="number" placeholder="input pin" required min="4">
+<img class="convert-icons" src="Icons/key-outline.svg" alt="">
+
+</div>
+
+
+    <div class="network-rap">
+
+<div class="network-rap-last">
+    <label for="Amount"> Amount*</label>
+<div class="input-propery">
+    <input onclick="input()" id="cashamount" type="number" name="Amount" placeholder="Min:200" required id="BuyInp">
+<span class="convert-icons">₦</span></div>
+
+    </div>
+    <div class="convertminimu-rap">
+       <p class="convertminimu" id="convertminimu">Minimum:₦200</p> 
+    </div>
+    
+
+<div class="recomand-amount">
+
+<span class="two-hundred">₦200</span>
+<span class="five-hundred">₦500</span>
+<span class="one-thousand">₦1000</span>
+<span class="two-thousand">₦2000</span>
+<span class="ten-thousand">₦10000</span>
+
+</div>
+    <div class="receiving">
+        <div class="receiving-rap">
+<span class="you-receive"> You will receive:</span>
+<span class="recive-amount">₦0.00</span>
+
+</div>
+
+</div>
+
+
+
+</div>
+    <span id="convertbnt"class="cash-btn">
+<button type="submit" onclick="convertcash()">Convert</button></span>
+
+
+<span id="continuebtn" class="continuebtn cash-btn">
+<button type="button" onclick="continuecash()"  >Continue</button></span>
+</form>
+
+
+
+<div class="guide">
+ <span class="guide-head">How it works</span>
+
+<ol>
+<li>Enter your number</li>
+<p>provide the correct number & amount </p>
+
+<li>Confimr conversion</li>
+<p>Review and confim the transaction</p>
+
+<li>Receive cash</li>
+<p>Cash will be added to your wallet</p>
+</ol>   
+</div>
+
+<div class="secure-direction">
+<div class="secure-rap">
+<img class="convert-icons" src="Icons/lock-closed-outline 1.svg" alt="">
+<span>Secure & Encrypted Transaction</span>
+</div></div>
+<!-- guide end -->
+</div>
+<!-- guide -->
+
+
+
+<!-- laording -->
+ <div id="loading-rang" class="loading-rage">
+
+
+
+ 
+
+<div class="loading-rap">
+
+    <div id="otp-range" class="otp-range" >
+    <div class="otp-rap">
+   
+<div class="otp-input">
+  <input id="otp" type="number">
+
+    <span class="invalid-otp">invalid</span>
+</div>
+
+
+
+
+<div class="resent-code">
+    <span id="sent">Sent:</span>
+    <span class="resent-codeloadin" onclick="resentcode()">Resent code:</span>
+    <p id="otp-time"></p>
+
+</div>
+<button class="input-btn" onclick="verify()">Verify-otp</button></div>
+</div>
+
+
+
+<div id="successful-rap" class="successful-rap">
+    <div class="successfull"><span>Successfull</span><img class="proccessing-image" src="Icons/success-svg.svg" alt=""></div></div>
+
+
+
+
+<div id="proccessing-rap" class="proccessing-rap">
+<div class="proccessing">
+    <p>proccessing...</p>
+<div class="loading">
+   </div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+
+  <div class="set-withdrwal-pin-rangin" id="set-pin-display">
+
+    <div class="set-withdrawal-pin">
+<span class="thepin-text">Set a withdrawal pin</span>
+<div class="set-pininput-rap">
+  <input class="set-pin" type="number" name="" id="set-pin">
+<span class="pin-error"></span>  
+</div>
+
+<button class="set-pinbtn" onclick="Setwithdrawalpin()"> SetPIN</button>
+</div>
+  </div>
+
+
+
+
+<div class="pin-security-raging" id="pin-display">
+    <div  class="pin-security-rap">
+        <div class="head-pin-rap">
+            <p></p>
+             <span class="thepin-text" id="thepin-text">Input PIN</span>
+<img class="close-pin-image" src="Icons/close-page.svg" alt=""> 
+        </div>
+  
+
+<div class="pin-securty-anderror">
+   <input class="pin-security" readonly  type="" name="pin" id="pin-security">
+  
+    <span id="pin-withdrawal-error" class="pin-withdrawal-error"></span> 
+</div>
+
+<a class="fogorting-pin-link" href="Change pin.html">Fogot Pin</a>
+
+
+<div class="pin-b-codebtn">
+    <button class="pinone">1</button>
+    <button class="pintwo">2</button>
+    <button class="pinthree">3</button>
+    <button class="pinfour">4</button>
+    <button class="pinfive">5</button>
+    <button class="pinsix">6</button>
+    <button class="pinseven">7</button>
+    <button class="pineight">8</button>
+    <button class="pinnine">9</button>
+    <button class="pinzero">0</button>
+    <button class="delete-pin">
+         <img class="delete-pin-image" src="Icons/delete-svgrepo-com.svg" alt="">
+
+    </button>
+
+</div>
+
+
+
+    <button id="densubpinbtn"  onclick="pindensubbtn()" class="pin-btn">Confime</button>
+    <button id="localwithdrawpinbnt" class="pin-btn"onclick="pinlocalbtn()">confime</button>
+</div>
+
+</div>
+
+
+<script src="javascript.js"></script>
+</body>
+</html>

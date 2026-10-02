@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Login.css">
+  <title>Login</title>
+</head>
+<body>
+  
+  <a href="Registerpage.html"> <img class="image-top" src="Icons/arrow-back-2.svg" alt=""></a>
+ 
+  <div class="container">
+
+
+
+<span class="loging-message"></span>
+
+
+    
+<div class="form-direction"> 
+    
+
+ 
+
+
+  <form id="login-form" action="/reg/sub">
+
+  <div class="form-rap">
+ <h1>LOGIN</h1>
+
+
+<div class="column">
+<label for="loginemail">Email / Username</label>
+<div class="input-rap"><div class="input-image-background"><img class="input-image" src="Icons/mail-outline.svg" alt=""></div>
+
+<input id="loginemail" type="text" name="Email" placeholder="Enter your username/email" required></div>
+<span class="useer-name-error"></span>
+</div>
+
+
+<div class="column">
+<label for="loginpassword">Password</label>
+<div class="input-rap"><div class="input-image-background"><img class="input-image" src="Icons/key-outline.svg" alt=""></div>
+
+<input id="loginpassword" type="password" name="last name" placeholder="Enter your password" required></div>
+<span class="password-error"></span>
+</div>
+
+<!-- <div class="column">
+<label for="C password">Confirm Password</label>
+<div class="input-rap"><div class="input-image-background"><img class="input-image" src="Icons/key-outline.svg" alt=""></div>
+
+<input id="C password" type="text" name="password" placeholder="confirm your password" required></div>
+
+<span class="fogotten-pas"><a  href="Home page.html">Forgotten password</a></span>
+</div> -->
+
+
+<div class="checkbox-rap"><input class="input-checkbox"      type="checkbox"><span>Remember me</span></div>
+
+
+
+<div class="button-direction">
+
+<button onclick="login()">LOGIN</button></div>
+<h3>Don't have an account?<a  href="Registerpage.html">Signup</a>
+</div>
+</h3>
+
+  </form>
+
+</div>
+
+</div>
+<script src="secong.js"></script>
+</body>
+</html>

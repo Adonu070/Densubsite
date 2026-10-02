@@ -1,0 +1,235 @@
+
+/*---- global---- */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+
+}
+
+body{
+    background-color:#0f1724;
+    color: var(--Forth-color-white-white);
+}
+
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+:root{
+     --first-color-darkblue: #0f1724;
+    --second-color-green: #37b24d;
+    --second-color-hover: #2b8a3e;
+    --third-color-lightgray: lightgray;
+    --Forth-color-white-white: white;
+    --fivth-color-black: black;
+    --sixth-color-almost-black:#13293b;
+        ---ligth-gray:#adb5bd;
+
+
+    /* ----font-size--- */
+    --first-font-10rem: 10rem;
+    --second-font-5rem: 5rem;
+    --third-font-2rem: 2rem;
+    ---forth-font-1-5rem: 1.5rem;
+    --fith-font-1rem: 1rem;
+}
+
+
+.container
+{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.image-top
+{
+  width: 3rem;
+  margin: 1rem;
+}
+header
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.help-image
+{
+  width: 3rem;
+ 
+}
+
+.help{
+   font-size: 3rem;
+    color: var(--Forth-color-white-white);
+    display: inline;
+    font-weight: 600;
+}
+   
+
+.help-rap
+{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.space
+{
+  display: flex;
+  justify-content: space-between;
+  color: var(---ligth-gray);
+}
+
+.space:active
+{
+  background-color: #383636;
+
+
+}
+.space:hover
+{
+  transform:scale(1.01,1.01);
+}
+
+.overall-rap
+{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h2
+{
+  font-size: var(--third-font-2rem);
+  font-weight: 600;
+}
+
+p
+{
+  font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive design-- */
+
+
+/* Tablet  width 1000px */
+@media(max-width: 62.5rem){
+/* 1000px / 16px = 62.5rem */
+/* 62.5rem x 16px = 100px */
+    html
+    {
+font-size: 56%;
+/* 9px / 16px = 50% */
+    }
+
+/* phones width 800px-1000px */
+
+@media(max-width: 50rem ){
+/* 800px / 16px = 50rem */
+/* 50rem x 16 = 800px */
+    html 
+    {
+font-size: 50% ;
+/* 8px / 16 =  50% */
+
+.space 
+{
+    
+   padding: 2rem;
+  
+    border: var(--second-color-hoverr);
+    border-radius:10px;
+    
+
+}
+
+.space:hover
+{
+    
+   border-radius: 10px;
+}
+
+}
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+}
+
+/* ---width 600-800 */
+@media(max-width: 37.5rem){
+/* 600px / 16px = 37.5rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+    }
+
+     
+}
+
+
+/* ---width 600-800 */
+@media(max-width: 25rem){
+/* 400px / 16px = 25rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+    }
+
+} 
+
+
+
+
+
+
+
+

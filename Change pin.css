@@ -1,0 +1,272 @@
+/*---- global---- */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background-color:#0f1724;
+    color: var(--Forth-color-white-white);
+}
+
+html{
+    font-size: 62.5%;
+}
+a{
+    text-decoration: none;
+}
+:root{
+     --first-color-darkblue: #0f1724;
+    --second-color-green: #37b24d;
+    --second-color-hover: #2b8a3e;
+    --third-color-lightgray: lightgray;
+    --Forth-color-white-white: white;
+    --fivth-color-black: black;
+    --sixth-color-almost-black:#13293b;
+    ---ligth-gray:#adb5bd;
+    --hover-blue:#4444d3;
+    --hover-green:#57cc57;
+
+    /* ----font-size--- */
+    --first-font-10rem: 10rem;
+    --second-font-5rem: 5rem;
+    --third-font-2rem: 2rem;
+    ---forth-font-1-5rem: 1.5rem;
+    --fith-font-1rem: 1rem;
+}
+
+
+.container
+{
+max-width: 1200px;
+width: 90%;
+margin: 0 auto;
+}
+
+
+header
+{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.image-top
+{
+    width: 3rem;
+    margin: 1rem;
+}
+
+.change-pin{
+    font-size: 3rem;
+    font-weight: 600;
+    display: inline;
+    color: var(--Forth-color-white-white);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+.culumn
+{
+    display: flex;
+    flex-direction: column;
+   
+    gap: 2px;
+}
+input
+{
+
+    width: 50rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    background-color: var(--first-color-darkblue);
+  border: 1px solid var(--second-color-hover);
+  border-radius: 1.5rem;
+  color: var(--Forth-color-white-white);
+  padding-left: 1rem;
+}
+
+button
+{
+    width: 100%;
+    border: 0;
+     background-color: var(--second-color-green);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 4rem;
+   
+    
+}
+
+button:hover{
+    transform: scale(1.01,1.01);
+}
+
+button:active{
+background-color: var(--second-color-hover);
+}
+
+.form-direction
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+}
+
+label
+{
+    margin-left: 0.5rem;
+    font-size: var(---forth-font-1-5rem);
+    font-weight: 600;
+}
+
+
+.pin-changed{
+
+    background-color: black;
+    padding: 1em;
+    border-radius: 1rem;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+    font-size: var(---forth-font-1-5rem);
+}
+
+
+.confirm-new-pin-error,.new-pin-r-error{
+    color: red;
+    font-size: var(---forth-font-1-5rem);
+}
+
+
+
+/* .button-direction
+{
+    display: flex;
+    justify-content: center;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----Responive------- */
+
+
+/* Tablet  width 1000px */
+@media(max-width: 62.5rem){
+/* 1000px / 16px = 62.5rem */
+/* 62.5rem x 16px = 100px */
+    html
+    {
+font-size: 56%;
+/* 9px / 16px = 50% */
+    }
+/* form 
+{
+    border: 1px solid var(--Forth-color-white-white);
+    padding: 2.5rem;
+    border-radius: 2rem;
+}
+   */
+
+}
+
+
+
+
+/* phones width 800px-1000px */
+
+@media(max-width: 50rem ){
+/* 800px / 16px = 50rem */
+/* 50rem x 16 = 800px */
+    html 
+    {
+font-size: 50% ;
+/* 8px / 16 =  50% */
+    }
+
+ 
+
+
+
+
+
+
+} 
+
+
+
+
+/* ---width 600-800 */
+@media(max-width: 37.5rem){
+/* 600px / 16px = 37.5rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+    }
+}
+
+
+/* ---width 600-800 */
+@media(max-width: 25rem){
+/* 400px / 16px = 25rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+   
+    
+}
+}
+
+/* ---width 360-600 */
+@media(max-width: 22.5rem){
+/* 360px / 16px = 22.5rem */
+/* 22.5rem x 16px = 360px */
+    html
+    {
+font-size: 31.5%;
+/* 6px / 16px = 31.5% */
+    }
+    
+    
+}
+/* --------Responsive end----- */
+
+
+
+

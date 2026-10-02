@@ -1,0 +1,182 @@
+
+/* -------global------ */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body
+{
+    background-color:#0f1724;
+    
+}
+ul{
+    list-style: none;
+}
+
+
+html
+
+{
+    font-size: 62.5%;
+}
+
+
+
+
+.container
+{
+    max-width: 1200px;
+    width: 90%;
+     margin: 0 auto;
+    
+  
+}
+
+:root
+{
+    --first-color-darkblue: #0f1724;
+    --second-color-green: #37b24d;
+    --second-color-hover: #2b8a3e;
+    --third-color-lightgray: lightgray;
+    --Forth-color-white-white: white;
+    --fivth-color-black: black;
+    --sixth-color-almost-black:#13293b;
+
+    /* ----p--- */
+    --first-font-10rem: 10rem;
+    --second-font-5rem: 5rem;
+    --third-font-2rem: 2rem;
+    ---forth-font-1-5rem: 1.5rem;
+    --fith-font-1rem: 1rem;
+}
+
+
+/* ---------global end------ */
+
+header
+{
+  color: var(--Forth-color-white-white);
+display: flex;
+justify-content: space-evenly;
+
+}
+
+.chat-center
+{
+  border: 2px solid var(--third-color-lightgray);
+  height: 80rem;
+  padding: 2rem;
+  justify-content: center;
+ display: flex;
+ position: relative;
+}
+
+.js-p
+{
+  color: var(--Forth-color-white-white);
+  display: flex;
+flex-direction: row-reverse;
+ font-size: var(---forth-font-1-5rem);
+ width: 30rem;
+justify-self: flex-end;
+margin-top: 1rem;
+}
+
+input
+{
+  
+width: 40rem;
+  /* padding-left: 1rem; */
+  border: 0;
+  outline: none;
+  margin-left: 1rem;
+  border-radius: 2rem;
+}
+
+.btn
+{
+  border: 0;
+  outline: none;
+  width: 6rem ;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+font-size: var(---forth-font-1-5rem);
+justify-content: center; 
+display: flex;
+align-items: center;
+}
+
+.btn-input{
+  display: flex;
+  background-color: var(--Forth-color-white-white);   
+  height: 4rem;
+ 
+  border-radius: 2rem;
+margin-top: 1rem;
+
+
+}
+
+.fixed-direction
+{
+  position: fixed;
+  bottom: 0.5%;
+}
+.css-icon
+{
+  width: 3rem;
+  height: 3rem;
+}
+
+.acive-statu
+{
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--second-color-green);
+border-radius: 50%;
+
+}
+
+.css-rap
+{
+  display: flex;
+  height: 2rem;
+  width: 4rem;
+  align-items: center;
+  
+
+}
+.css-rang
+{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--Forth-color-white-white);
+  align-items: center;
+  width: 10rem;
+}
+p
+{
+  color: aliceblue;
+}
+
+.light
+{
+  display: flex;
+  gap: 1rem;
+}
+
+.switch-off
+{
+  background-color: #2b8a3e;
+}
+
+.switch-on
+{
+  background-color: red;
+}

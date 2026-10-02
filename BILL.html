@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="BILL.css">
+    <title>BILL</title>
+</head>
+<body>
+    
+<header>
+    <div class="hearder-rap">
+        <a href="Home page.html">  <img class="image-top" src="Icons/arrow-back-2.svg" alt=""></a>
+  
+    <span class="ELETRICITY-BILL">ELETRICITY BILLS </span></div>
+</header>
+
+
+<div class="container">
+
+
+<div class="logos-direction">
+<div class="logos">
+
+<img class="image-icon" src="images/Enugu.jpg" alt="">
+
+ <img class="image-icon" src="images/Kano.jpg" alt="">
+
+ <img class="image-icon" src="images/Kaduna.jpg" alt="">
+</div></div>
+
+<div class="form-direction">
+<form class="form-rap" action="/data/submite" method="get">
+
+   <div class="network-rap">
+    <label for="Biller"> Biller*</label>
+    <select name="Category" id="Network" required>
+        <option value="Biller">Select Biller</option>
+        
+        <option value="KADUNA"> <span style="color: green;">KADUNA EDC</span></option>
+        <option value="ENUGU"> ENUGU EDC</option>
+        <option value="KANO"> KANO EDC</option>
+        <option value="IKEJA">IKEJA EDC</option>
+        <option value="ABUJA">ABUJA EDC</option>
+        <option value="BENIN">BENIN EDC</option>
+        <option value="PH">PH EDC</option>
+        <option value="IBADAN">IBADAN EDC</option>
+    </select></div>
+
+
+<div class="network-rap-last">
+    <label for="Number"> Meter details*</label>
+    <input type="number" name="number" placeholder="input number" required ></div>
+
+<div class="network-rap-last">
+    <label for="Number"> Amount*</label>
+    <input type="number" name="number" placeholder="Enter amount" required ></div>
+
+<button>Pay</button>
+</form>
+
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>

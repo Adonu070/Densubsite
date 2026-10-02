@@ -1,0 +1,473 @@
+
+/* -------global------ */
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body
+{
+    background-color:#0f1724;
+    
+}
+ul{
+    list-style: none;
+}
+
+
+html
+
+{
+    font-size: 62.5%;
+}
+
+
+
+
+.container
+{
+    max-width: 1200px;
+    width: 90%;
+     margin: 0 auto;
+    
+  
+}
+
+:root
+{
+    --first-color-darkblue: #0f1724;
+    --second-color-green: #37b24d;
+    --second-color-hover: #2b8a3e;
+    --third-color-lightgray: lightgray;
+    --Forth-color-white-white: white;
+    --fivth-color-black: black;
+    --sixth-color-almost-black:#13293b;
+
+    /* ----p--- */
+    --first-font-10rem: 10rem;
+    --second-font-5rem: 5rem;
+    --third-font-2rem: 2rem;
+    ---forth-font-1-5rem: 1.5rem;
+    --fith-font-1rem: 1rem;
+}
+
+
+/* ---------global end------ */
+/* ---Header---- */
+header
+{
+    padding: 2rem;
+    margin-bottom: 5rem;
+
+    
+}
+
+.image-top
+{
+ width: 3rem;
+ margin: 1rem;
+}
+
+.hearder-rap
+{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+
+.Buy-data
+{
+    font-size: 3rem;
+    color: var(--Forth-color-white-white);
+    display: inline;
+    font-weight: 600;
+}
+
+/* ----header end----- */
+
+/* ---feature esction--- */
+.image-icon
+{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.logos
+{
+    display: flex;
+   width: 100%;
+   justify-content: space-evenly;
+}
+
+.logos-direction
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem; 
+}
+
+.network-rap
+{
+    display: flex;
+   flex-direction: column;
+   gap: 0.4rem;
+}
+
+
+.network-rap-last
+{
+     display: flex;
+   flex-direction: column;
+   gap: 0.4rem;
+   order: 1; 
+   margin-bottom: 1rem;
+   margin-top: 2rem;
+}
+
+.form-rap
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border: 2px solid var(--Forth-color-white-white);
+    border-radius: 2rem;
+    padding: 3rem;
+    width: 100%;
+
+}
+label
+{
+    font-size: var(---forth-font-1-5rem);
+    font-weight: 600;
+    color: var(--Forth-color-white-white);
+}
+
+select
+{
+    border-radius: 1.5rem;
+    background-color: var(--first-color-darkblue);
+    color: var(--Forth-color-white-white);
+     border: 2px solid var(--sixth-color-almost-black); 
+    height: 5rem;
+    padding-left: 1rem;
+   
+}
+
+
+input{
+    background-color: var(--first-color-darkblue);
+    border: 1px solid var(--first-color-darkblue);
+outline: none;
+ width: 100%;
+ padding-left: 1rem;
+ border-top-left-radius: 1rem;
+ border-bottom-left-radius: 1rem;
+}
+
+.inpute-number-rap{
+    display: flex;
+height: 5rem;
+   border: 2px solid var(--sixth-color-almost-black);
+    border-radius: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+.input-icons{
+    width: 2rem;
+}
+
+
+.form-direction
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+button
+{
+   
+    height: auto;
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--Forth-color-white-white);
+    border: 0;
+   border-radius: 10px;
+background-color: var(--second-color-green);
+   order: 2;
+   
+    }
+
+    button:link,button:visited
+    {
+        color: var(--Forth-color-white-white);
+        background-color: var(--second-color-green);
+    }
+
+    button:hover,button:active
+    {
+        color: var(--Forth-color-white-white);
+        background-color: var(--second-color-hover);
+        transform: scale(1.01,1.01);
+    }
+
+    .available-balance
+    {
+        display: flex;
+      justify-content: flex-end;
+      color: var(--Forth-color-white-white);
+      font-size: var(---forth-font-1-5rem);
+    }
+    
+
+    .Network-prices
+    {
+       display: none;
+    }
+
+    .emptynetwork{
+        color: red;
+      font-size: var(---forth-font-1-5rem);
+      display: none;
+      margin-bottom: -2.1rem;
+    }
+
+   .confirmdatanumber-network{
+    color: var(--Forth-color-white-white);
+    font-size: 1.3rem;
+   }
+
+@keyframes move{
+from{
+ left : 1rem;
+}
+to 
+{
+    right: 1rem;
+}
+}
+
+    .proccessing{
+        background-color: blue;
+        text-align: center;
+       width: 20rem;
+animation: move 0.3s infinite alternate;
+position: relative;
+
+height: 1rem;
+       
+    }
+
+.proccessing-rap
+{
+    position: fixed;
+  top: 0%;
+    right: 1%;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+
+}
+
+.proceesingrang{
+    background-color: var(--sixth-color-almost-black);
+    width: 30rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        flex-direction: column;
+        color: var(--Forth-color-white-white);
+        gap: 2rem;
+        font-size: var(---forth-font-1-5rem);
+}
+
+.dataproccesing,.confirmdatanumber-network,.continue-buying{
+    display: none;
+}
+
+/* .{
+    display: none;
+} */
+
+.was-succefull{
+    color: var(--second-color-green);
+    background-color: var(--Forth-color-white-white);
+    width: auto;
+    font-size: var(--third-font-2rem);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.was-succefullrap{
+    position: fixed;
+    top: 8%;
+    left: 50%;
+   transform: translate(-50%,-50%);
+   display: none;
+}
+
+
+.insuficient-rap{
+      color: red;
+    background-color: var(--Forth-color-white-white);
+    width:90%;
+    font-size: var(--third-font-2rem);
+     border-radius: 1rem;
+    font-weight: 600;
+    height: 4rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.insufficient-direction{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+
+.insufficient-image{
+    width: 2rem;
+}
+
+
+.MTNdata-signs,.AIRTELdata-signs,.GLOdata-signs,.ninemobile-signs
+{
+    display: none;
+    margin-bottom: -4rem;
+    background-color:var(--Forth-color-white-white);
+  
+width: 9rem;
+height: 0.5rem;
+
+border-bottom-left-radius: 2rem;
+border-bottom-right-radius: 2rem;
+
+}
+.image-sings-rap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theaddtest{
+    color: aliceblue;
+}
+
+
+/* --feature section end-- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----Responive------- */
+
+
+/* Tablet  width 1000px */
+@media(max-width: 62.5rem){
+/* 1000px / 16px = 62.5rem */
+/* 62.5rem x 16px = 100px */
+    html
+    {
+font-size: 56%;
+/* 9px / 16px = 50% */
+    }
+}
+
+/* phones width 800px-1000px */
+
+@media(max-width: 50rem ){
+/* 800px / 16px = 50rem */
+/* 50rem x 16 = 800px */
+    html 
+    {
+font-size: 50% ;
+/* 8px / 16 =  50% */
+    }
+
+.form-rap
+{
+    border: none;
+}
+
+
+ 
+.Buy-data
+{
+   align-content: center; 
+}
+
+
+} 
+
+
+
+/* ---width 600-800 */
+@media(max-width: 37.5rem){
+/* 600px / 16px = 37.5rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+    }
+}
+
+
+/* ---width 600-800 */
+@media(max-width: 25rem){
+/* 400px / 16px = 25rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+    }
+    .logos-direction
+    {
+        display: none;
+    }
+}
+
+
+/* --------Responsive end----- */
