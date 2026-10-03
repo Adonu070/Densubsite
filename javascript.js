@@ -1268,6 +1268,11 @@ const allnetworkarrays=[
 // {ininemobledata:'9mobile'},
 ]
 
+const secondstore=[
+localStorage.getItem('secondstore')
+]
+
+
 
 let thenetworkhomelogo=document.getElementById('thenetwork')
 let thetransaction=document.getElementById('thetransaction')
@@ -1297,7 +1302,6 @@ alltransactionshow+=JSON.parse(localStorage.getItem('locaclwithdrawalsave'))
 let theaddtest=document.querySelector('.theaddtest')
 
 homerecenttransactions.innerHTML=alltransactionshow
-
 let savehomrecent=''
 
    function continuedata(){
@@ -1363,10 +1367,11 @@ wassuccesful .style.display='block'
 // single home gitery end
 
 
+// allnetworkarrays.push(transasave)
+
    for(let i=0;i<allnetworkarrays.length;i++){
 
-     transasave+=`
-
+      transasave=`
 <div class="transaction-ranging">
 <span class="trx-colour  trx-shif">${localStorage.getItem('thenetworkstore')}</span>
 <span class="trx-colour">Data</span>
@@ -1377,14 +1382,19 @@ wassuccesful .style.display='block'
 <span id="thedebitamount" class="amountshow">${localStorage.getItem('theplan')}</span></div>
 
 </div>
-
 `
+ 
+ 
+    
+
 
 
 localStorage.setItem('datatransave',JSON.stringify(transasave))
+// secondstore.push(transasave)
 totaltxr++
 localStorage.setItem('totataltransaction',totaltxr)
-
+// localStorage.setItem('Array',JSON.stringify(allnetworkarrays))
+// localStorage.setItem('secondstore',secondstore)
 }
 
 
