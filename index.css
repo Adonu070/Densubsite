@@ -608,6 +608,8 @@ align-items: flex-start;
     flex-direction: column;
 }
 
-
+.fund-wallet{
+padding-bottom: 1rem;
+}
 
 }
