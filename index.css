@@ -565,5 +565,49 @@ gap: 1rem;
 
 
 
- 
+ /* Tablet  width 1000px */
+@media(max-width: 62.5rem){
+/* 1000px / 16px = 62.5rem */
+/* 62.5rem x 16px = 100px */
+    html
+    {
+font-size: 56%;
+/* 9px / 16px = 50% */
+    }
+}
 
+/* phones width 800px-1000px */
+
+@media(max-width: 50rem){
+/* 800px / 16px = 50rem */
+/* 50rem x 16 = 800px */
+    html 
+    {
+font-size: 50% ;
+/* 8px / 16 =  50% */
+    }
+}
+
+/* ---width 600-800 */
+@media(max-width: 25rem){
+/* 400px / 16px = 25rem */
+/* 37.5rem x 16px = 600px */
+    html
+    {
+font-size: 43.75%;
+/* 7px / 16px = 43.75% */
+    }
+
+.hero-fourth{
+align-items: flex-start;
+
+}
+
+.getanadlog-together{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+}
