@@ -1212,10 +1212,11 @@ width: 10rem;
 .pin-security-rap{
     background-color: var(--sixth-color-almost-black);
     width: 100%;
-    height: 50.5rem;
+    height: auto;
     padding: 1rem 1rem 6rem;
    
     position: fixed;
+   padding-bottom: 5rem;
     bottom: 0%;
     /* left: 50%; */
     border-top-left-radius: 1rem;
@@ -1291,6 +1292,14 @@ font-size: 31.5%;
         position: absolute;
     }
     
-  
+  .pin-btn{
+    width: 100%;
+  }
+
+.input-withdrawal,.input-withdrawal{
+   width: 20rem;
+}
+
+
 }
 /* --------Responsive end----- */
