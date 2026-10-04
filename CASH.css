@@ -1300,6 +1300,15 @@ font-size: 31.5%;
    width: 20rem;
 }
 
-
+.recomand-amount{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+.widthdraw-rap{
+    flex-direction: column;
+ 
+}
 }
 /* --------Responsive end----- */
