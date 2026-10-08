@@ -566,6 +566,23 @@ gap: 1rem;
     text-decoration: none;
    font-size: var(---forth-font-1-5rem); 
 }
+
+
+
+/*  on study*/
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*  */
+
 /* ------featuer end---- */
 
   
