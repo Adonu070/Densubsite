@@ -558,6 +558,13 @@ gap: 1rem;
   align-self: flex-start;
   cursor: pointer;
   
+  
+}
+
+.card-getstarted-text a {
+    color: var(--Forth-color-white-white);
+    text-decoration: none;
+   font-size: var(---forth-font-1-5rem); 
 }
 /* ------featuer end---- */
 
@@ -583,9 +590,22 @@ font-size: 56%;
 /* 50rem x 16 = 800px */
     html 
     {
-font-size: 50% ;
 /* 8px / 16 =  50% */
     }
+
+.hearo-ovarll-rap
+{
+   display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 6rem;
+     width: 100%;
+}
+
+.hero-overal-direction{
+    margin-bottom: 10rem;
+}
+
+
 }
 
 /* ---width 600-800 */

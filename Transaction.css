@@ -283,6 +283,14 @@ display: none;
 }
 
 
+li{
+    list-style: none;
+    width: 100%;
+}
+
+ul{
+    width: 100%;
+}
 /* .transaction{
         font-size: 3rem;
     color: var(--Forth-color-white-white);
@@ -411,20 +419,18 @@ font-size: 56%;
 font-size: 50% ;
 /* 8px / 16 =  50% */
 
-.container
-{
-   /* max-height: 120rem;
-   overflow: scroll;
-    box-shadow: -0.2rem 0.2rem 1rem 0rem var(---ligth-gray); */
-    
- /* border: 2px solid var(---ligth-gray); */
+.local-bank{
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-template-rows: 8rem;
+   width: 100%;
+
+   align-items: center; 
+   font-size:var(---forth-font-1-5rem);
+   border-bottom: 1px solid var(---cards-border); 
 }
 
-table 
-{
-    margin-bottom: 0;
-   
-}
     }
 
 

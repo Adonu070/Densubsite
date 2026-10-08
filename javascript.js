@@ -10,9 +10,8 @@
 // console.log(date)
 // console.log(time)
 
-// densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`;
- 
 
+ 
 
 
 
@@ -20,6 +19,58 @@ let balance=Number(localStorage.getItem('recivin'))||0;
 
 let totaltxr=localStorage.getItem('totataltransaction');
 // Cash page
+let transasave=JSON.parse(localStorage.getItem('transasave'))||'';
+
+
+
+
+
+
+
+
+// Home page
+let densubbalance=document.getElementById('densubbalance')
+if (densubbalance){
+
+densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')||0}`
+
+
+document.querySelector('.ref-link').innerHTML=`https://Densubsite/.io/ref/${localStorage.getItem('username')}`
+
+// let dashbaord=document.getElementById('dashboard')
+
+
+
+
+
+
+
+
+
+
+if(densubbalance.innerHTML===`₦${localStorage.getItem('transferbalance')}`){
+
+
+ eyes1.style.display='block';
+ eyes2.style.display='none';
+
+}
+
+
+
+}
+
+// Home page end
+
+
+
+
+
+
+
+
+
+
 
 
 function saving(){
@@ -160,7 +211,8 @@ localStorage.setItem('theid',theid)
 
 for (let i=0; i<localarrey.length;i++){
 
-locaclwithdrawalsave+=` <div class="local-bank">
+transasave+=` <li>
+<div class="local-bank">
     <span class="trx-shif">Send to</span>
 
     <span id="the-bank" class="the-bank">${localStorage.getItem('thelocalwithdrawal')
@@ -171,9 +223,9 @@ locaclwithdrawalsave+=` <div class="local-bank">
 
 
     <span class="the-localeamount " id="the-lcalamount">-₦${localStorage.getItem('theamount')}</span>
- </div>`
+ </div> </li>`
 
- localStorage.setItem('locaclwithdrawalsave',JSON.stringify(locaclwithdrawalsave) )
+ localStorage.setItem('transasave',JSON.stringify(transasave) )
 totaltxr++
 localStorage.setItem('totataltransaction',totaltxr)
 }
@@ -447,22 +499,23 @@ homebagebalance+=inputconvert
  localStorage.setItem('transferbalance',homebagebalance)
 
 for (let i=0;i<thetransnsafer.length;i++){
-  densave+=`
+  transasave+=`
+  <li>
 <div class="cashtaransaction">
     <span class="trx-colourhtml  trx-shif">Cash balance</span>
     <span class="trx-colourhtml"> Transafar</span>
     <span class="trx-colourhtml">-To m balance</span>
     <span class="cashdeduct-amount trx-colour">-₦${localStorage.getItem('inputconvert')}</span>
     
-   </div> `
-densave+=` 
+   </div> </li> `
+transasave+=` <li>
 <div class="cashtaransaction">
 <span class="trx-colourhtml  trx-shif">Main balance</span>
     <span class="trx-colourhtml">received</span>
     <span class="trx-colourhtml">Transafar</span>
     <span class="cashrecive-amount trx-colour">+₦${localStorage.getItem('inputconvert')}</span>
-    </div>`
-   localStorage.setItem('densave',JSON.stringify(densave))
+    </div> </li>`
+   localStorage.setItem('transasave',JSON.stringify(transasave))
 
    pinsecuriey.value=''
 totaltxr++
@@ -582,6 +635,7 @@ let selectnetwork=document.getElementById('Network')
 let receivingamount=document.querySelector('.recive-amount')
 let cashform=document.getElementById('cashform')
 let cashamount=document.getElementById('cashamount')
+let continuebtn=document.getElementById('continuebtn')
 let convertbtn=document.getElementById('convertbnt')
 const proccessingwithidrawal=document.getElementById('proccessing-withdraw');
 let allcashconvert=''
@@ -652,9 +706,11 @@ const rates=[{
   Gloown:'80%'
 }]
 
+let convertnumber=document.getElementById('convert-number')
+let invalidconvertnumber=document.querySelector('.invalide-convertnumber')
+// let requirds='080'||'090'||'091'||'081'||'070';
+
 function convertcash(){
-
-
 
 let minimumwarning= document.getElementById('convertminimu')
 
@@ -668,8 +724,8 @@ cashform.addEventListener(`submit`,function(event){
 event.preventDefault();
 
 // event.preventDefault();
-if(cashamount.value>=200){
-   
+if(convertnumber.value.length===11&& cashamount.value>=200 && (convertnumber.value.includes('080')||convertnumber.value.includes('070')||convertnumber.value.includes('090')||convertnumber.value.includes('071')||convertnumber.value.includes('081') )){
+   invalidconvertnumber.innerHTML=''
 let usermtn=cashamount.value;
 let resultmtn=usermtn*20/100;
 let alltmtn= usermtn-resultmtn
@@ -683,7 +739,12 @@ continuebtn.style.display='block';
 }
 
 
+else if (convertnumber.value.length!==11 && !convertnumber.value.includes('080')||!convertnumber.value.includes('070')||!convertnumber.value.includes('090')||!convertnumber.value.includes('071')||!convertnumber.value.includes('081')) {
+invalidconvertnumber.innerHTML='invalide number'
+}
+
 else{
+
   minimumwarning.style.display='block';
   receivingamount.innerHTML='₦0.00'
  }
@@ -764,6 +825,15 @@ airtelsign.style.display='none'
 }
   
 }
+
+
+function sendnumber(){
+convertbtn.style.display='block'
+continuebtn.style.display='none'
+}
+
+
+
 
 
 
@@ -869,8 +939,8 @@ let savebalcnce;
  function verify(){
 
   
-if (inputotp.value===otp){
-  invalidotp.style.display=''
+if (inputotp.value.length===6){
+  invalidotp.innerHTML=''
 
   //  setTimeout(function(){
  proccessingrap.style.display='block'
@@ -896,7 +966,7 @@ setTimeout(function(){
     
     balance+=recivin
 // stormoney=recivin
-   console.log(balance)
+  //  console.log(balance)
   localStorage.setItem('recivin',balance)
  cashbalance.innerHTML= localStorage.getItem('recivin')
 totaltxr++
@@ -917,8 +987,8 @@ orderpark.innerHTML=localStorage.getItem('balanceamount')
   
 
 
-else if (inputotp.value!=otp){
-  invalidotp.style.display='block'
+else if (inputotp.value.length!==6){
+  invalidotp.innerHTML='invalide otp (6 didgit)'
 }
  }
 
@@ -1069,7 +1139,7 @@ let ninemobilesing=document.querySelector('.ninemobile-signs')
  function networklogo(){
    emptydatanetwork.style.display='none'
     contibuebuying.style.display='none'
-  confirmdatanumbernetwork.style.display='none'
+  confirmdatanumbernetwork.innerHTML=''
 buybtn.style.display='block'
 
  }
@@ -1165,6 +1235,7 @@ emptynetwork.style.display='block'
  }
 
 
+
 // network prices end
 
 
@@ -1186,23 +1257,34 @@ const allnetworklogo={
 
 
 
+
 let buybtn=document.getElementById('buybtn')
+
+
+
 function buydata(){
 // let inputnumberdata=document.getElementById('inputnumberdata')
 dataform.addEventListener('click',(event)=>{
 
 
 
-  if(inputnumber.value>1000 && datanetworks.value!=='network' && plan.value!=='Select-plan'){
+  if(inputnumber.value.length===11 && datanetworks.value!=='network' && plan.value!=='Select-plan' && (inputnumber.value.includes('080')||inputnumber.value.includes('070')||inputnumber.value.includes('090')||inputnumber.value.includes('071')||inputnumber.value.includes('081') )){
 event.preventDefault()
+confirmdatanumbernetwork.innerHTML='Pleaese confirm the selected newtork and phone number before continue'
 buybtn.style.display='none'
 contibuebuying.style.display='block'
-confirmdatanumbernetwork.style.display='block'
+
   
 
 
   
 }
+
+else if (inputnumber.value.length!==11 && plan.value!=='Select-plan' && !inputnumber.value.includes('080')||!inputnumber.value.includes('070')||!inputnumber.value.includes('090')||!inputnumber.value.includes('071')||!inputnumber.value.includes('081') ){
+
+  confirmdatanumbernetwork.innerHTML='<span class="invalide">invalide number</span>'
+}
+
  
 if (datanetworks.value==='MTN'){
   event.preventDefault()
@@ -1257,7 +1339,19 @@ event.preventDefault()
 
 
 
- 
+
+// function correctdatanumber(){
+    
+// }
+
+
+//
+//   inputnumber.addEventListener('dblclick',()=>{
+// contibuebuying.style.display='none';
+//     buybtn.style.display='block';
+//     confirmdatanumbernetwork.innerHTML=''
+// console.log('clcik')
+//  })
 
 
 
@@ -1279,7 +1373,7 @@ let thetransaction=document.getElementById('thetransaction')
 let databundle=document.getElementById('data-bundle');
 let debit=document.getElementById('thedebitamount');
 
-let transasave=JSON.parse(localStorage.getItem('datatransave')) ;
+
 
 // if (JSON.parse(localStorage.getItem('datatransave'))=null){
 // transasave=`
@@ -1291,17 +1385,20 @@ let transasave=JSON.parse(localStorage.getItem('datatransave')) ;
 
 let alltransactionshow=''
 
-alltransactionshow+=JSON.parse(localStorage.getItem('datatransave'))
+// alltransactionshow+=JSON.parse(localStorage.getItem('datatransave'))||''
 
-alltransactionshow+=JSON.parse(localStorage.getItem('densave'));
+// alltransactionshow+=JSON.parse(localStorage.getItem('densave'))||'';
 
 
-alltransactionshow+=JSON.parse(localStorage.getItem('locaclwithdrawalsave'))
+// alltransactionshow+=JSON.parse(localStorage.getItem('locaclwithdrawalsave'))||''
 
  const homerecenttransactions=document.getElementById('home-recent-transactions')
 let theaddtest=document.querySelector('.theaddtest')
 
-homerecenttransactions.innerHTML=alltransactionshow
+homerecenttransactions.innerHTML=transasave
+
+
+
 let savehomrecent=''
 
    function continuedata(){
@@ -1332,7 +1429,7 @@ setTimeout(()=>{
 
   dataprocesing.style.display='none'
 
-confirmdatanumbernetwork.style.display='none';
+confirmdatanumbernetwork.innerHTML=''
   buybtn.style.display='block'
 contibuebuying.style.display='none'
 
@@ -1352,26 +1449,11 @@ wassuccesful .style.display='block'
   let planbougth=document.getElementById('plan-bought').innerHTML=selected.dataset.bundle;
   let succesfulnetwork=document.getElementById('succefulnewtwork').innerHTML=datanetworks.value
 
-// single home histery
-//   savehomrecent=`<div class="transaction-ranging">
-// <span class="trx-colour">${localStorage.getItem('thenetworkstore')}</span>
-// <span class="trx-colour">Data</span>
-// <span class="trx-colour">${localStorage.getItem('theboundle')}</span>
 
-// <div class="transaction-amount-rang trx-colour">
-// <span class="naira">₦</span>
-// <span id="thedebitamount"  class="amountshow">${localStorage.getItem('theplan')}</span></div>
-
-// </div>`
-// localStorage.setItem('savehomrecent',JSON.stringify(savehomrecent))
-// single home gitery end
-
-
-// allnetworkarrays.push(transasave)
 
    for(let i=0;i<allnetworkarrays.length;i++){
 
-      transasave=`
+      transasave+=`<li>
 <div class="transaction-ranging">
 <span class="trx-colour  trx-shif">${localStorage.getItem('thenetworkstore')}</span>
 <span class="trx-colour">Data</span>
@@ -1381,7 +1463,7 @@ wassuccesful .style.display='block'
 <span class="naira">-₦</span>
 <span id="thedebitamount" class="amountshow">${localStorage.getItem('theplan')}</span></div>
 
-</div>
+</li>
 `
  
  
@@ -1389,38 +1471,35 @@ wassuccesful .style.display='block'
 
 
 
-localStorage.setItem('datatransave',JSON.stringify(transasave))
+localStorage.setItem('transasave',JSON.stringify(transasave))
 // secondstore.push(transasave)
 totaltxr++
 localStorage.setItem('totataltransaction',totaltxr)
 // localStorage.setItem('Array',JSON.stringify(allnetworkarrays))
 // localStorage.setItem('secondstore',secondstore)
-}
 
+   }
 
 
 },3000)
 
-setTimeout(()=>{
-wassuccesful.style.display='none'
-},7000)
 
 
-}
 
+setTimeout(()=>{wassuccesful.style.display='none'},7000)
 
 }
-// densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`
 
 
 
 // event.preventDefault()
-  // })
-
- 
 }
+ 
+   }
 
-localStorage.setItem('datatransave',JSON.stringify(transasave))
+
+
+localStorage.setItem('transasave',JSON.stringify(transasave))
 
 
 
@@ -1573,83 +1652,27 @@ document.querySelector('.local-bank').addEventListener('click',()=>{
 
 
 
-// Home page
-
-
-
-
-if (densubbalance){
-  
-let densubbalance=document.getElementById('densubbalance')
-
-// densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}0`||0
 
 
 
 
 
 
-let dashbaord=document.getElementById('dashboard')
-
-
-
-
-const eyes1=document.querySelector('.eyes1') 
-
-const eyes2=document.querySelector('.eyes2')
-
-const closebalance='**********'
-
-eyes1.style.display='block'
-// }
-
-eyes1.addEventListener('click',()=>{
- eyes2.style.display='block'
-  densubbalance.innerHTML=closebalance;
- eyes1.style.display='none'
-})
-
-
-eyes2.addEventListener('click',()=>{
- densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}` 
-eyes2.style.display='none'
- eyes1.style.display='block'
-})
 
 
 
 
 
 
-if(densubbalance.innerHTML===`₦${localStorage.getItem('transferbalance')}`){
-
-
- eyes1.style.display='block';
- eyes2.style.display='none';
-
-}
-
-
-
-const refernow=document.querySelector('.refer-now')
-const refdetails=document.getElementById('ref-details')
-const closerefpage=document.querySelector('.close-ref-page')
-refernow.addEventListener('click',()=>{
-refdetails.style.display='block'
-})
-
-closerefpage.addEventListener('click',()=>{
-  refdetails.style.display='none'
-})
-
-
-}
 
 
 
 
 
-// Home page end
+
+
+
+
 
 
 // AIRTIME PAGE

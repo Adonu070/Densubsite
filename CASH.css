@@ -749,7 +749,7 @@ align-items: center;
     font-weight: 600;
     color: red;
  
-    display: none;
+    /* display: none; */
     margin-bottom: -1.8rem;
 }
 
@@ -1109,7 +1109,7 @@ justify-content: center;
     grid-column: 2/3;
 }
 
-.minimum-cansh,.minimum-den,.account-number-error,.name-error{
+.minimum-cansh,.minimum-den,.account-number-error,.name-error,.invalide-convertnumber{
     color: red;
 }
 

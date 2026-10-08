@@ -169,6 +169,7 @@ outline: none;
  padding-left: 1rem;
  border-top-left-radius: 1rem;
  border-bottom-left-radius: 1rem;
+ color: var(--Forth-color-white-white);
 }
 
 .inpute-number-rap{
@@ -294,7 +295,7 @@ height: 1rem;
         font-size: var(---forth-font-1-5rem);
 }
 
-.dataproccesing,.confirmdatanumber-network,.continue-buying{
+.dataproccesing,.continue-buying{
     display: none;
 }
 
@@ -375,6 +376,10 @@ border-bottom-right-radius: 2rem;
     color: aliceblue;
 }
 
+.invalide{
+    color: red;
+    font-size: var(---forth-font-1-5rem);
+}
 
 /* --feature section end-- */
 
