@@ -350,71 +350,6 @@ document.querySelector('.comingsoon').innerHTML=''
  })
 }
 
-// ref-property
-const refernow=document.querySelector('.refer-now')
-const refdetails=document.getElementById('ref-details')
-const closerefpage=document.querySelector('.close-ref-page')
-refernow.addEventListener('click',()=>{
-refdetails.style.display='block'
-})
-
-closerefpage.addEventListener('click',()=>{
-  refdetails.style.display='none'
-})
-
-
-let eyestore='';
-// close balance
-const eyes1=document.querySelector('.eyes1') 
-const eyes2=document.querySelector('.eyes2')
-const closebalance='**********'
-eyes1.style.display='block'
-
-
-// 
-
-
-
-if (localStorage.getItem('eyestore')==='1'){
-
-
- 
-  }
-   if (localStorage.getItem('eyestore')===''){
-    eyes2.style.display='none'
-  // densubbalance.innerHTML=closebalance;
- eyes1.style.display='block'
-
-   }
-
-
-// 
-eyes1.addEventListener('click',()=>{
-    densubbalance.innerHTML=closebalance;
-    eyes2.style.display='block'
-  
- eyes1.style.display='none'
-  // localStorage.setItem('eyestore',eyestore)
-})
-
-
-
-
-eyes2.addEventListener('click',()=>{
-
- eyes2.style.display='none'
-   densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`;
- eyes1.style.display='block'
-
-
-localStorage.setItem('eyestore',eyestore)
- 
-}
- 
- 
-
-)
-
 
 
 // second feature page end
@@ -514,7 +449,6 @@ if (wallet){
 
 
 // wallet page end
-
 
 
 
