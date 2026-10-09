@@ -415,7 +415,7 @@ event.preventDefault()
 
 
 
-densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`||0
+densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')||0}`
 document.querySelector('.totaltrx').innerHTML=localStorage.getItem('totataltransaction')||0;
 
 // change page End
@@ -426,9 +426,16 @@ document.querySelector('.totaltrx').innerHTML=localStorage.getItem('totataltrans
 
 
 
-//  Profile page
 
-document.getElementById('usershow').innerHTML=localStorage.getItem('username')
+
+//  Profile page
+let profileuser=document.getElementById('usershowname')
+
+
+if (profileuser){
+ profileuser.innerHTML=localStorage.getItem('username')
+}
+
 
 
 // Profile page end
@@ -449,8 +456,6 @@ if (wallet){
 
 
 // wallet page end
-
-
 
 
 

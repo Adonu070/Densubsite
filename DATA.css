@@ -332,7 +332,7 @@ height: 1rem;
     font-size: var(--third-font-2rem);
      border-radius: 1rem;
     font-weight: 600;
-    height: 4rem;
+    height: auto;
     padding-left: 1rem;
     display: flex;
     align-items: center;
@@ -441,6 +441,20 @@ font-size: 50% ;
 {
    align-content: center; 
 }
+
+.insuficient-rap{
+    width: 100%;
+    display: flex;
+    /* height: auto; */
+    padding: 0.5rem;
+    font-size: 1.7rem;
+    align-content: center;
+}
+
+
+
+
+
 
 
 } 

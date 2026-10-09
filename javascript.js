@@ -31,8 +31,7 @@ let transasave=JSON.parse(localStorage.getItem('transasave'))||'';
 // Home page
 let densubbalance=document.getElementById('densubbalance')
 if (densubbalance){
-
-densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')||0}`
+densubbalance.innerHTML===`₦${localStorage.getItem('transferbalance')||0}`
 
 
 document.querySelector('.ref-link').innerHTML=`https://Densubsite/.io/ref/${localStorage.getItem('username')}`
@@ -48,7 +47,7 @@ document.querySelector('.ref-link').innerHTML=`https://Densubsite/.io/ref/${loca
 
 
 
-if(densubbalance.innerHTML===`₦${localStorage.getItem('transferbalance')}`){
+if(densubbalance.innerHTML===`₦${localStorage.getItem('transferbalance')||0}`){
 
 
 
@@ -78,17 +77,17 @@ eyes1.style.display='block'
 
 
 
-if (localStorage.getItem('eyestore')==='1'){
+// if (localStorage.getItem('eyestore')==='1'){
 
 
  
-  }
-   if (localStorage.getItem('eyestore')===''){
-    eyes2.style.display='none'
-  // densubbalance.innerHTML=closebalance;
- eyes1.style.display='block'
+//   }
+//    if (localStorage.getItem('eyestore')===''){
+//     eyes2.style.display='none'
+//   // densubbalance.innerHTML=closebalance;
+//  eyes1.style.display='block'
 
-   }
+//    }
 
 
 
@@ -106,7 +105,7 @@ eyes1.addEventListener('click',()=>{
 eyes2.addEventListener('click',()=>{
 
  eyes2.style.display='none'
-   densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')}`;
+   densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')||0}`;
  eyes1.style.display='block'
 
 

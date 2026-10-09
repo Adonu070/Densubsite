@@ -100,7 +100,7 @@ header
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     padding-top: 1.5rem;
 }
 
@@ -1000,6 +1000,35 @@ align-items: center;
 .mobile{
     display: none;
 }
+
+.notice-rap{
+    overflow: hidden;
+  
+    margin-bottom: 3rem;
+}
+
+
+
+.notice{
+position: relative;
+white-space: nowrap;
+animation: move 13s linear infinite;
+font-size: var(--third-font-2rem);
+font-weight: 500;
+
+}
+
+
+@keyframes move {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
 /* left feature page end */
 
 
@@ -1052,7 +1081,7 @@ header
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
     padding-top: 1.5rem;
 
 
@@ -1381,7 +1410,9 @@ margin-bottom: -10rem;
 .close-ref-page{
     margin-left: -3rem;
 }
-
+.amount{
+     margin-bottom: 1rem;
+}
 
 }
 
