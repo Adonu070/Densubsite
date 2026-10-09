@@ -24,7 +24,7 @@ document.getElementById('confirm-password-error').innerHTML=''
 
 
 
-if(firstnameinput.value!=='' && usernameinput.value!=='' && emailinput.value!=='' && emailinput.value.includes('@') && emailinput.value!==localStorage.getItem('email') && passwordinput.value!=='' && confirmpasswordinput.value!=='' && confirmpasswordinput.value===passwordinput.value && usernameinput.value!==localStorage.getItem('username') && passwordinput.value!==localStorage.getItem('password')  && passwordinput.value.length>=6){
+if(firstnameinput.value && usernameinput.value && emailinput.value && emailinput.value.includes('@')  && (emailinput.value!==localStorage.getItem('email') && passwordinput.value &&  usernameinput.value!==localStorage.getItem('username')&& passwordinput.value.length>=6 &&(confirmpasswordinput.value && confirmpasswordinput.value===passwordinput.value ))){
   
               window.location.href='Home page.html';
 
@@ -81,9 +81,9 @@ else if(!emailinput.value.includes('@')){
    document.getElementById('user-name-error').innerHTML=''
     
 }
-else if (usernameinput.value.length<4){
-  document.getElementById('user-name-error').innerHTML='Username must be at least 4 characters long'
-}
+// else if (usernameinput.value.length<4){
+//   document.getElementById('user-name-error').innerHTML='Username must be at least 4 characters long'
+// }
 
 // else if (usernameinput.value===localStorage.getItem('username') ){
 //   document.getElementById('user-name-error').innerHTML='Username already exist'
@@ -415,7 +415,7 @@ event.preventDefault()
 
 
 
-densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')||0}`
+
 document.querySelector('.totaltrx').innerHTML=localStorage.getItem('totataltransaction')||0;
 
 // change page End

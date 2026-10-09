@@ -45,7 +45,7 @@ document.querySelector('.ref-link').innerHTML=`https://Densubsite/.io/ref/${loca
 
 
 
-
+densubbalance.innerHTML=`₦${localStorage.getItem('transferbalance')||0}`
 
 if(densubbalance.innerHTML===`₦${localStorage.getItem('transferbalance')||0}`){
 
@@ -807,8 +807,8 @@ continuebtn.style.display='block';
  emptynetwork.style.display='none'
 }
 
-
 else if (convertnumber.value.length!==11 && !convertnumber.value.includes('080')||!convertnumber.value.includes('070')||!convertnumber.value.includes('090')||!convertnumber.value.includes('071')||!convertnumber.value.includes('081')) {
+
 invalidconvertnumber.innerHTML='invalide number'
 }
 
@@ -829,10 +829,10 @@ else if(selectnetwork.value==='AIRTEL'){
   airtelsign.style.display='block'
 
   event.preventDefault();
-  if (cashamount.value>=200) {
+  if (convertnumber.value.length===11&& cashamount.value>=200 && (convertnumber.value.includes('080')||convertnumber.value.includes('070')||convertnumber.value.includes('090')||convertnumber.value.includes('071')||convertnumber.value.includes('081') )) {
 
   
- 
+  invalidconvertnumber.innerHTML=''
 let userairtel=cashamount.value
 let resultairtel=userairtel*15/100;
 let allairtel=userairtel-resultairtel
@@ -843,6 +843,13 @@ continuebtn.style.display='block';
  minimumwarning.style.display='none';
  emptynetwork.style.display='none'
 }
+
+
+else if (convertnumber.value.length!==11 && !convertnumber.value.includes('080')||!convertnumber.value.includes('070')||!convertnumber.value.includes('090')||!convertnumber.value.includes('071')||!convertnumber.value.includes('081')) {
+
+invalidconvertnumber.innerHTML='invalide number'
+}
+
 
 else{
    minimumwarning.style.display='block';
@@ -856,8 +863,8 @@ glosign.style.display='block'
 mtnsign.style.display='none'
 airtelsign.style.display='none'
 event.preventDefault();
-  if(cashamount.value>=200){
-  
+  if(convertnumber.value.length===11&& cashamount.value>=200 && (convertnumber.value.includes('080')||convertnumber.value.includes('070')||convertnumber.value.includes('090')||convertnumber.value.includes('071')||convertnumber.value.includes('081') )){
+   invalidconvertnumber.innerHTML='';
   let usermtn=cashamount.value;
 let resultmtn=usermtn*20/100;
 let alltmtn= usermtn-resultmtn
@@ -868,6 +875,13 @@ receivingamount.innerHTML=`₦${allcashconvert}`;
  minimumwarning.style.display='none';
  emptynetwork.style.display='none';
 }
+
+else if (convertnumber.value.length!==11 && !convertnumber.value.includes('080')||!convertnumber.value.includes('070')||!convertnumber.value.includes('090')||!convertnumber.value.includes('071')||!convertnumber.value.includes('081')) {
+
+invalidconvertnumber.innerHTML='invalide number'
+}
+
+
 else{
  
   minimumwarning.style.display='block';
