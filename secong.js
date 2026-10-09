@@ -24,7 +24,7 @@ document.getElementById('confirm-password-error').innerHTML=''
 
 
 
-if(firstnameinput.value && usernameinput.value && emailinput.value && emailinput.value.includes('@')  && (emailinput.value!==localStorage.getItem('email') && passwordinput.value &&  usernameinput.value!==localStorage.getItem('username')&& passwordinput.value.length>=6 &&(confirmpasswordinput.value && confirmpasswordinput.value===passwordinput.value ))){
+if( usernameinput.value && emailinput.value && emailinput.value.includes('@')  && (emailinput.value!==localStorage.getItem('email') && passwordinput.value &&  usernameinput.value!==localStorage.getItem('username')&& passwordinput.value.length>=6 &&(confirmpasswordinput.value && confirmpasswordinput.value===passwordinput.value )) &&firstnameinput.value){
   
               window.location.href='Home page.html';
 
@@ -50,7 +50,7 @@ function ErrorMessages() {
 if (firstnameinput.value==='' ){
   document.getElementById('first-name-error').innerHTML='Please enter your full name'
   }
-else if(usernameinput.value===''){
+ if(usernameinput.value===''){
   document.getElementById('user-name-error').innerHTML='Please enter your username'
   }
 
