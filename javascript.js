@@ -157,7 +157,7 @@ let cashbalance=document.getElementById('cashbalance')
  let amount= document.getElementById('amount')
    let theinput=inputElement.value;
 
- cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')}`
+ cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')||0}`
 let succefullwithdrawal=document.getElementById('succefful-withdraw-rap');
 
 const localwithdrawal=document.getElementById('local-withdrawal')
@@ -221,7 +221,7 @@ withdrawalpinerror.innerHTML=''
 
 // minimumdensub.style.display=''
 localStorage.setItem('balanceamount',balance);
- cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')}`
+ cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')||0}`
  densub.style.display='none'
    proccessingwithidrawal.style.display='block'
 console.log(localStorage.getItem('balanceamount'))
@@ -1009,7 +1009,7 @@ if (time===0){
 
 let stormoney;
 
-cashbalance.innerHTML= localStorage.getItem('recivin');
+cashbalance.innerHTML= localStorage.getItem('recivin')||0;
 
 const proccessingrap=document.getElementById('proccessing-rap')
 const successfulrap=document.getElementById('successful-rap')
