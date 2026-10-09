@@ -221,7 +221,7 @@ withdrawalpinerror.innerHTML=''
 
 // minimumdensub.style.display=''
 localStorage.setItem('balanceamount',balance);
- cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')||0}`
+ cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')}`
  densub.style.display='none'
    proccessingwithidrawal.style.display='block'
 console.log(localStorage.getItem('balanceamount'))
