@@ -157,7 +157,7 @@ let cashbalance=document.getElementById('cashbalance')
  let amount= document.getElementById('amount')
    let theinput=inputElement.value;
 
- cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')}`
+ cashbalance.innerHTML=`₦${localStorage.getItem('balanceamount')||0}`
 let succefullwithdrawal=document.getElementById('succefful-withdraw-rap');
 
 const localwithdrawal=document.getElementById('local-withdrawal')
